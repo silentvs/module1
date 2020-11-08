@@ -1,16 +1,15 @@
 package module_2
 
 fun main(args: Array<String>) {
-    val countriesArray: Array<Array<String>> = Array(4) { Array(3) { "" } }
+    val countriesArray: Array<Array<String>> = Array(3) { Array(4) { "" } }
 
-    countriesArray[0] = arrayOf("Страна", "Столица", "Валюта")
-    countriesArray[1] = arrayOf("Россия", "Москва", "Рубль")
-    countriesArray[2] = arrayOf("Украина", "Киев", "Гривна")
-    countriesArray[3] = arrayOf("Польша", "Варшава", "Злотый")
+    countriesArray[0] = arrayOf("Страна", "Россия", "Украина", "Польша")
+    countriesArray[1] = arrayOf("Столица", "Москва", "Киев", "Варшава")
+    countriesArray[2] = arrayOf("Валюта", "Рубль", "Гривна", "Злотый")
 
-    for (column in countriesArray) {
-        for (cell in column) {
-            print("$cell\t\t")
+    for (column in 0 until countriesArray[0].size) {
+        for (cell in 0 until countriesArray.size) {
+            print("${countriesArray[cell][column]}\t\t")
         }
         println()
     }
