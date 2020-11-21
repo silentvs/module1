@@ -1,6 +1,6 @@
 package module_4
 
-class Aircraft(_number: String, _maxFlightRange: Int, _tankCapacity: Int) {
+open class Aircraft(_number: String, _maxFlightRange: Int, _tankCapacity: Int) {
 
     var number: String
 
