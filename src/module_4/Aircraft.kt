@@ -1,12 +1,24 @@
 package module_4
 
-class Aircraft {
+class Aircraft(_number: String, _maxFlightRange: Int, _tankCapacity: Int) {
 
-    var number: String = "G-VBZZ"
+    var number: String
 
-    var maxFlightRange: Int = 5000
+    init {
+        number = _number
+    }
 
-    var tankCapacity: Int = 600
+    var maxFlightRange: Int
+
+    init {
+        maxFlightRange = _maxFlightRange
+    }
+
+    var tankCapacity: Int
+
+    init {
+        tankCapacity = _tankCapacity
+    }
 
     val fuelConsumption: Double
         get() = tankCapacity / (maxFlightRange / 100.0)
