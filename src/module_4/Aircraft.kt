@@ -2,25 +2,22 @@ package module_4
 
 abstract class Aircraft(_number: String, _maxFlightRange: Int, _tankCapacity: Int) {
 
-    var number: String
+    protected var number: String
+    protected var maxFlightRange: Int
+    protected var tankCapacity: Int
 
     init {
         number = _number
-    }
-
-    var maxFlightRange: Int
-
-    init {
         maxFlightRange = _maxFlightRange
-    }
-
-    var tankCapacity: Int
-
-    init {
         tankCapacity = _tankCapacity
     }
 
-    val fuelConsumption: Double
+    protected val fuelConsumption: Double
         get() = tankCapacity / (maxFlightRange / 100.0)
+
+    open fun printInformation() {
+        print("Характеристики самолета:\nНомер воздушного судна:$number\tMAX дальность полета:${maxFlightRange}км\t" +
+                "Вместимость бака:${tankCapacity}л\tРасход топлива(л) на 100км:$fuelConsumption")
+    }
 
 }
