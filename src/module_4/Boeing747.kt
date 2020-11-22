@@ -4,7 +4,7 @@ class Boeing747(_number: String, _maxFlightRange: Int, _tankCapacity: Int, overr
 
     override fun printInformation() {
         super.printInformation()
-        println("\tВместимость пассажиров:$passengerCapacity")
+        println("Вместимость пассажиров:$passengerCapacity")
     }
 
 }

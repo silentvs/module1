@@ -16,8 +16,8 @@ abstract class Aircraft(_number: String, _maxFlightRange: Int, _tankCapacity: In
         get() = tankCapacity / (maxFlightRange / 100.0)
 
     open fun printInformation() {
-        print("Характеристики самолета:\nНомер воздушного судна:$number\tMAX дальность полета:${maxFlightRange}км\t" +
-                "Вместимость бака:${tankCapacity}л\tРасход топлива(л) на 100км:$fuelConsumption")
+        println("\nХарактеристики самолета:\nНомер воздушного судна:$number\nMAX дальность полета:${maxFlightRange}км\n" +
+                "Вместимость бака:${tankCapacity}л\nРасход топлива(л) на 100км:$fuelConsumption")
     }
 
 }
